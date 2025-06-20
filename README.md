@@ -197,7 +197,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Related Links
 
-- [Azure AI Services Documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/)
+- [Azure AI Foundry Documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/)
 - [.NET Azure SDK](https://github.com/Azure/azure-sdk-for-net)
 - [Scala Language Specification](https://scala-lang.org/files/archive/spec/)
 - [Java Language Specification](https://docs.oracle.com/javase/specs/)
