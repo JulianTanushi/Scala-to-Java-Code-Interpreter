@@ -104,7 +104,7 @@ project-root/
 ```
 
 
-## 🔧 Customization
+## Customization
 
 ### Modifying Conversion Prompts
 
@@ -147,7 +147,7 @@ You are an expert software engineer specializing in converting Scala code to Jav
 
 Extend the `ExtractJavaCodeFromResponse()` method to handle specific formatting requirements or post-processing logic.
 
-## 🚨 Error Handling
+## Error Handling
 
 The application includes comprehensive error handling:
 
@@ -156,13 +156,13 @@ The application includes comprehensive error handling:
 - **Conversion failures**: Continues processing other files if one fails
 - **Network issues**: Implements retry logic with exponential backoff
 
-## 📊 Performance Considerations
+## Performance Considerations
 
 - **Rate Limiting**: The application includes 500ms delays between API calls
 - **Memory Usage**: Processes files sequentially to manage memory consumption
 - **Concurrent Processing**: Can be modified for parallel processing if needed
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -170,11 +170,11 @@ The application includes comprehensive error handling:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -195,7 +195,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    - Consider fine-tuning your Azure AI Agent with better examples
 
 
-## 🔗 Related Links
+## Related Links
 
 - [Azure AI Services Documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/)
 - [.NET Azure SDK](https://github.com/Azure/azure-sdk-for-net)
