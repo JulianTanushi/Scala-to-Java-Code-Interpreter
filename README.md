@@ -40,7 +40,7 @@ An intelligent C# application that leverages Azure AI Agents to automatically co
    - Install Azure CLI: `az login`
    - Or set up environment variables for Service Principal authentication
 
-## ⚙️ Configuration
+## Configuration
 
 Before running the application, update the following configurations in `run_agent.cs`:
 
