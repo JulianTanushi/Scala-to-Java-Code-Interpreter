@@ -2,7 +2,7 @@
 
 An intelligent C# application that leverages Azure AI Agents to automatically convert Scala code files to Java. This tool processes entire directories of Scala files and generates equivalent Java code while maintaining functionality and following Java best practices.
 
-## Features Overview
+## 🚀 Features
 
 - **Batch Processing**: Convert entire directories of Scala files at once
 - **AI-Powered Conversion**: Uses Azure AI Agents for intelligent code translation
@@ -16,18 +16,18 @@ An intelligent C# application that leverages Azure AI Agents to automatically co
 - **Progress Tracking**: Real-time conversion status with success/failure indicators
 - **Error Handling**: Robust error handling with detailed logging
 
-## Prerequisites
+## 📋 Prerequisites
 
 - **.NET 6.0 or later**
-- **Azure AI Services account** with AI Foundry Projects API access
+- **Azure AI Services account** with Projects API access
 - **Azure credentials** configured (Azure CLI, Managed Identity, or Service Principal)
 - **Scala source files** to convert
 
-## Installation
+## 🛠️ Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/JulianTanushi/scala-to-java-converter.git
+   git clone https://github.com/yourusername/scala-to-java-converter.git
    cd scala-to-java-converter
    ```
 
@@ -42,7 +42,7 @@ An intelligent C# application that leverages Azure AI Agents to automatically co
 
 ## ⚙️ Configuration
 
-Before running the application, update the following configurations in `run_agent.cs`:
+Before running the application, update the following configurations in `Program.cs`:
 
 ### Required Configuration
 
@@ -60,12 +60,12 @@ PersistentAgent agent = agentsClient.Administration.GetAgent("your-agent-id");
 
 ### Azure AI Agent Setup
 
-1. Create an Azure AI Foundry Project in the Azure portal
-2. Deploy a Persistent Azure AI Agent trained for code conversion
+1. Create an Azure AI Project in the Azure portal
+2. Deploy a Persistent Agent trained for code conversion
 3. Note your agent ID and project endpoint
 4. Ensure the agent has appropriate instructions for Scala to Java conversion
 
-## Usage
+## 🚀 Usage
 
 ### Basic Usage
 
@@ -97,12 +97,43 @@ PersistentAgent agent = agentsClient.Administration.GetAgent("your-agent-id");
 ```
 project-root/
 ├── scala-files/           # Input: Place your .scala files here
-│   ├── samplecode.scala
+│   ├── MyClass.scala
+│   ├── Utils.scala
+│   └── models/
+│       └── User.scala
 ├── java-files/            # Output: Converted .java files
-│   ├── HelloWorld.java
-└── run-agent.cs             # Main application
+│   ├── MyClass.java
+│   ├── Utils.java
+│   └── models/
+│       └── User.java
+└── Program.cs             # Main application
 ```
 
+## 📝 Example Conversion
+
+### Input (Scala)
+```scala
+case class User(id: Long, name: String, email: Option[String])
+
+object UserService {
+  def findUser(id: Long): Option[User] = {
+    // Implementation
+    Some(User(id, "John Doe", Some("john@example.com")))
+  }
+}
+```
+
+### Output (Java)
+```java
+public record User(Long id, String name, Optional<String> email) {}
+
+public class UserService {
+    public static Optional<User> findUser(Long id) {
+        // Implementation
+        return Optional.of(new User(id, "John Doe", Optional.of("john@example.com")));
+    }
+}
+```
 
 ## 🔧 Customization
 
@@ -115,32 +146,11 @@ string conversionPrompt = $@"Please convert the following Scala code to Java.
     
 // Add your custom requirements here
 // Example: Use specific Java frameworks, coding standards, etc.
-                  
-Scala file: {Path.GetFileName(scalaFilePath)}
 
-You are an expert software engineer specializing in converting Scala code to Java.
-        
-        Please convert the following Scala code to equivalent Java code:
-        
-        Requirements:
-        1. Maintain the same functionality and logic
-        2. Use appropriate Java design patterns and conventions
-        3. Handle Scala-specific features appropriately:
-           - Case classes -> Java records or POJOs with builder pattern
-           - Pattern matching -> switch expressions or if-else chains
-           - Option types -> Optional<T>
-           - Collections -> Java Collections API
-           - Higher-order functions -> Java 8+ functional interfaces
-        4. Add appropriate imports
-        5. Use modern Java features (Java 17+) when beneficial
-        6. Maintain code structure and comments
-        
-        Scala Code:
-        ```scala
-        {scalaContent}
-        ```
-        
-        Please provide only the converted Java code without explanations.;
+Scala Code:
+```scala
+{scalaContent}
+```";
 ```
 
 ### Adding Custom Processing
@@ -194,6 +204,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    - Review and customize the conversion prompt
    - Consider fine-tuning your Azure AI Agent with better examples
 
+### Getting Help
+
+- Check the [Issues](https://github.com/yourusername/scala-to-java-converter/issues) page
+- Review Azure AI Services documentation
+- Ensure your agent is properly configured for code conversion tasks
 
 ## 🔗 Related Links
 
