@@ -32,12 +32,12 @@ partial class Program
             Console.WriteLine("Please set the scalaInputDirectory and javaOutputDirectory variables.");
             return;
         }
-        var endpoint = new Uri("https://jtanushi-9347-resource.services.ai.azure.com/api/projects/jtanushi-9347");
+        var endpoint = new Uri("https://your-resource.services.ai.azure.com/api/projects/your-project-id"); // Update with your actual endpoint
         AIProjectClient projectClient = new(endpoint, new DefaultAzureCredential());
 
         PersistentAgentsClient agentsClient = projectClient.GetPersistentAgentsClient();
 
-        PersistentAgent agent = agentsClient.Administration.GetAgent("asst_YQZlrfnHivwVMQBBAdWKWuPL");
+        PersistentAgent agent = agentsClient.Administration.GetAgent("your-agent-id"); // Update with your actual agent ID
         
         // Create a new thread for this conversion session
         PersistentAgentThread thread = agentsClient.Threads.CreateThread();

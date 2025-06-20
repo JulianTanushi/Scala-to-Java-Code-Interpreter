@@ -27,7 +27,7 @@ An intelligent C# application that leverages Azure AI Agents to automatically co
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/JulianTanushi/scala-to-java-converter.git
+   git clone https://github.com/JulianTanushi/Scala-to-Java-Code-Interpreter.git
    cd scala-to-java-converter
    ```
 
