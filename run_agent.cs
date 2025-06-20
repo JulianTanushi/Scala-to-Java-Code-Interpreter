@@ -27,16 +27,16 @@ partial class Program
         // Configuration
         string scalaInputDirectory = "/Users/julian/Documents/CustomProjects/ScalatoJava-Csharp/scala-files"; // Update with your actual path
         string javaOutputDirectory = "/Users/julian/Documents/CustomProjects/ScalatoJava-Csharp/java-files";  // Update with your actual path
-        if (string.IsNullOrWhiteSpace(scalaInputDirectory) || string.IsNullOrWhiteSpace(javaOutputDirectory))
-        {
-            Console.WriteLine("Please set the scalaInputDirectory and javaOutputDirectory variables.");
-            return;
-        }
         var endpoint = new Uri("https://your-resource.services.ai.azure.com/api/projects/your-project-id"); // Update with your actual endpoint
+        // Initialize Azure AI Project client
         AIProjectClient projectClient = new(endpoint, new DefaultAzureCredential());
-
+        // Initialize Persistent Agents client
+        // Ensure you have the correct project ID
         PersistentAgentsClient agentsClient = projectClient.GetPersistentAgentsClient();
-
+        // Retrieve the agent you want to use for conversion
+        // Make sure to replace "your-agent-id" with the actual ID of your trained agent
+        // Ensure you have the correct agent ID
+        // You can find your agent ID in the Azure portal or via the API
         PersistentAgent agent = agentsClient.Administration.GetAgent("your-agent-id"); // Update with your actual agent ID
         
         // Create a new thread for this conversion session
@@ -154,7 +154,7 @@ You are an expert software engineer specializing in converting Scala code to Jav
                 }
             }
             
-            Console.WriteLine($"\n🎉 Conversion completed! Check output directory: {javaOutputDirectory}");
+            Console.WriteLine($"\n Conversion completed! Check output directory: {javaOutputDirectory}");
         }
         finally
         {
