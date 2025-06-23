@@ -86,10 +86,10 @@ PersistentAgent agent = agentsClient.Administration.GetAgent("your-agent-id");
    === Scala to Java Converter ===
    Found 5 Scala files to convert.
    Processing: MyScalaClass.scala
-   ✅ Converted: MyScalaClass.scala → MyScalaClass.java
+   Converted: MyScalaClass.scala → MyScalaClass.java
    Processing: DataProcessor.scala
-   ✅ Converted: DataProcessor.scala → DataProcessor.java
-   🎉 Conversion completed! Check output directory: /path/to/java-files
+   Converted: DataProcessor.scala → DataProcessor.java
+   Conversion completed! Check output directory: /path/to/java-files
    ```
 
 ### Directory Structure
