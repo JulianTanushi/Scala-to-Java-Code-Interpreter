@@ -19,7 +19,7 @@ An intelligent C# application that leverages Azure AI Agents to automatically co
 ## Prerequisites
 
 - **.NET 6.0 or later**
-- **Azure AI Services account** with AI Foundry Projects API access
+- **Azure AI Foundry Service** with AI Foundry Projects API access
 - **Azure credentials** configured (Azure CLI, Managed Identity, or Service Principal)
 - **Scala source files** to convert
 
