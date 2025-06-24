@@ -1,4 +1,4 @@
-# Scala to Java Converter
+# Scala to Java Code Interpreter
 
 An intelligent C# application that leverages Azure AI Agents to automatically convert Scala code files to Java. This tool processes entire directories of Scala files and generates equivalent Java code while maintaining functionality and following Java best practices.
 
